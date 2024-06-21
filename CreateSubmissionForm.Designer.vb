@@ -74,7 +74,7 @@ Partial Class CreateSubmissionForm
         ' 
         Label3.AutoSize = True
         Label3.Font = New Font("Segoe UI", 12F)
-        Label3.Location = New Point(31, 183)
+        Label3.Location = New Point(31, 197)
         Label3.Name = "Label3"
         Label3.Size = New Size(67, 28)
         Label3.TabIndex = 3
@@ -84,7 +84,7 @@ Partial Class CreateSubmissionForm
         ' Label4
         ' 
         Label4.Font = New Font("Segoe UI", 12F)
-        Label4.Location = New Point(-4, 229)
+        Label4.Location = New Point(-3, 240)
         Label4.Name = "Label4"
         Label4.Size = New Size(141, 76)
         Label4.TabIndex = 4
@@ -107,14 +107,14 @@ Partial Class CreateSubmissionForm
         ' 
         ' tbPhone
         ' 
-        tbPhone.Location = New Point(130, 187)
+        tbPhone.Location = New Point(130, 201)
         tbPhone.Name = "tbPhone"
         tbPhone.Size = New Size(416, 27)
         tbPhone.TabIndex = 7
         ' 
         ' tbGithub
         ' 
-        tbGithub.Location = New Point(130, 240)
+        tbGithub.Location = New Point(130, 249)
         tbGithub.Name = "tbGithub"
         tbGithub.Size = New Size(416, 27)
         tbGithub.TabIndex = 8
@@ -123,7 +123,7 @@ Partial Class CreateSubmissionForm
         ' 
         btnSubmit.BackColor = Color.FromArgb(CByte(165), CByte(216), CByte(255))
         btnSubmit.Font = New Font("Segoe UI", 12F)
-        btnSubmit.Location = New Point(26, 405)
+        btnSubmit.Location = New Point(26, 462)
         btnSubmit.Name = "btnSubmit"
         btnSubmit.Size = New Size(520, 44)
         btnSubmit.TabIndex = 10
@@ -135,7 +135,7 @@ Partial Class CreateSubmissionForm
         btnToggleStopwatch.AutoSize = True
         btnToggleStopwatch.BackColor = Color.FromArgb(CByte(255), CByte(236), CByte(153))
         btnToggleStopwatch.Font = New Font("Segoe UI", 12F)
-        btnToggleStopwatch.Location = New Point(12, 322)
+        btnToggleStopwatch.Location = New Point(12, 359)
         btnToggleStopwatch.Name = "btnToggleStopwatch"
         btnToggleStopwatch.Size = New Size(320, 42)
         btnToggleStopwatch.TabIndex = 11
@@ -146,7 +146,7 @@ Partial Class CreateSubmissionForm
         ' 
         lbStopwatchTime.BackColor = Color.FromArgb(CByte(233), CByte(236), CByte(239))
         lbStopwatchTime.Font = New Font("Segoe UI", 12F)
-        lbStopwatchTime.Location = New Point(354, 322)
+        lbStopwatchTime.Location = New Point(363, 359)
         lbStopwatchTime.Name = "lbStopwatchTime"
         lbStopwatchTime.Size = New Size(183, 42)
         lbStopwatchTime.TabIndex = 12
@@ -161,7 +161,7 @@ Partial Class CreateSubmissionForm
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
         BackColor = Color.White
-        ClientSize = New Size(573, 479)
+        ClientSize = New Size(573, 545)
         Controls.Add(lbStopwatchTime)
         Controls.Add(btnToggleStopwatch)
         Controls.Add(btnSubmit)

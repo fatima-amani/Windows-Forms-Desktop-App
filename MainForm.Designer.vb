@@ -30,10 +30,11 @@ Partial Class MainForm
         ' btnViewSubmissions
         ' 
         btnViewSubmissions.BackColor = Color.FromArgb(CByte(255), CByte(236), CByte(153))
+        btnViewSubmissions.FlatAppearance.BorderColor = Color.Black
         btnViewSubmissions.Font = New Font("Segoe UI", 12F)
         btnViewSubmissions.Location = New Point(12, 102)
         btnViewSubmissions.Name = "btnViewSubmissions"
-        btnViewSubmissions.Size = New Size(757, 41)
+        btnViewSubmissions.Size = New Size(593, 41)
         btnViewSubmissions.TabIndex = 1
         btnViewSubmissions.Text = "VIEW SUBMISSIONS (CTRL + V)"
         btnViewSubmissions.UseVisualStyleBackColor = False
@@ -42,9 +43,9 @@ Partial Class MainForm
         ' 
         btnCreateSubmission.BackColor = Color.FromArgb(CByte(165), CByte(216), CByte(255))
         btnCreateSubmission.Font = New Font("Segoe UI", 12F)
-        btnCreateSubmission.Location = New Point(12, 162)
+        btnCreateSubmission.Location = New Point(12, 159)
         btnCreateSubmission.Name = "btnCreateSubmission"
-        btnCreateSubmission.Size = New Size(757, 39)
+        btnCreateSubmission.Size = New Size(593, 40)
         btnCreateSubmission.TabIndex = 2
         btnCreateSubmission.Text = "CREATE NEW SUBMISSION (CTRL+N)"
         btnCreateSubmission.UseVisualStyleBackColor = False
@@ -63,7 +64,7 @@ Partial Class MainForm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(800, 450)
+        ClientSize = New Size(619, 249)
         Controls.Add(lbTitle)
         Controls.Add(btnCreateSubmission)
         Controls.Add(btnViewSubmissions)
