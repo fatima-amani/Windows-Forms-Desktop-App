@@ -35,6 +35,7 @@ Partial Class ViewSubmissionForm
         tbUserStopwatch = New TextBox()
         btnPrevious = New Button()
         btnNext = New Button()
+        btnDelete = New Button()
         SuspendLayout()
         ' 
         ' Label1
@@ -84,9 +85,9 @@ Partial Class ViewSubmissionForm
         ' 
         lbUserGithub.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
         lbUserGithub.Font = New Font("Segoe UI", 12F)
-        lbUserGithub.Location = New Point(12, 223)
+        lbUserGithub.Location = New Point(12, 227)
         lbUserGithub.Name = "lbUserGithub"
-        lbUserGithub.Size = New Size(121, 75)
+        lbUserGithub.Size = New Size(115, 122)
         lbUserGithub.TabIndex = 4
         lbUserGithub.Text = "GitHub Link for Task 2"
         lbUserGithub.TextAlign = ContentAlignment.TopCenter
@@ -107,7 +108,7 @@ Partial Class ViewSubmissionForm
         tbUserName.Location = New Point(141, 97)
         tbUserName.Name = "tbUserName"
         tbUserName.ReadOnly = True
-        tbUserName.Size = New Size(415, 27)
+        tbUserName.Size = New Size(375, 27)
         tbUserName.TabIndex = 6
         tbUserName.TabStop = False
         tbUserName.TextAlign = HorizontalAlignment.Center
@@ -115,10 +116,10 @@ Partial Class ViewSubmissionForm
         ' tbUserEmail
         ' 
         tbUserEmail.BackColor = Color.FromArgb(CByte(233), CByte(236), CByte(239))
-        tbUserEmail.Location = New Point(141, 136)
+        tbUserEmail.Location = New Point(139, 136)
         tbUserEmail.Name = "tbUserEmail"
         tbUserEmail.ReadOnly = True
-        tbUserEmail.Size = New Size(415, 27)
+        tbUserEmail.Size = New Size(377, 27)
         tbUserEmail.TabIndex = 7
         tbUserEmail.TextAlign = HorizontalAlignment.Center
         ' 
@@ -128,7 +129,7 @@ Partial Class ViewSubmissionForm
         tbUserPhone.Location = New Point(141, 181)
         tbUserPhone.Name = "tbUserPhone"
         tbUserPhone.ReadOnly = True
-        tbUserPhone.Size = New Size(415, 27)
+        tbUserPhone.Size = New Size(375, 27)
         tbUserPhone.TabIndex = 8
         tbUserPhone.TextAlign = HorizontalAlignment.Center
         ' 
@@ -138,7 +139,7 @@ Partial Class ViewSubmissionForm
         tbUserGithub.Location = New Point(141, 227)
         tbUserGithub.Name = "tbUserGithub"
         tbUserGithub.ReadOnly = True
-        tbUserGithub.Size = New Size(417, 27)
+        tbUserGithub.Size = New Size(375, 27)
         tbUserGithub.TabIndex = 9
         tbUserGithub.TextAlign = HorizontalAlignment.Center
         ' 
@@ -148,7 +149,7 @@ Partial Class ViewSubmissionForm
         tbUserStopwatch.Location = New Point(139, 311)
         tbUserStopwatch.Name = "tbUserStopwatch"
         tbUserStopwatch.ReadOnly = True
-        tbUserStopwatch.Size = New Size(417, 27)
+        tbUserStopwatch.Size = New Size(377, 27)
         tbUserStopwatch.TabIndex = 10
         tbUserStopwatch.TextAlign = HorizontalAlignment.Center
         ' 
@@ -157,7 +158,7 @@ Partial Class ViewSubmissionForm
         btnPrevious.BackColor = Color.FromArgb(CByte(255), CByte(236), CByte(153))
         btnPrevious.Location = New Point(22, 384)
         btnPrevious.Name = "btnPrevious"
-        btnPrevious.Size = New Size(254, 41)
+        btnPrevious.Size = New Size(227, 41)
         btnPrevious.TabIndex = 11
         btnPrevious.Text = "PREVIOUS (CTRL+P)"
         btnPrevious.UseVisualStyleBackColor = False
@@ -165,18 +166,31 @@ Partial Class ViewSubmissionForm
         ' btnNext
         ' 
         btnNext.BackColor = Color.FromArgb(CByte(165), CByte(216), CByte(255))
-        btnNext.Location = New Point(294, 384)
+        btnNext.Location = New Point(289, 384)
         btnNext.Name = "btnNext"
-        btnNext.Size = New Size(262, 41)
+        btnNext.Size = New Size(227, 41)
         btnNext.TabIndex = 12
         btnNext.Text = "NEXT (CTRL+N)"
         btnNext.UseVisualStyleBackColor = False
+        ' 
+        ' btnDelete
+        ' 
+        btnDelete.BackColor = Color.Red
+        btnDelete.Font = New Font("Segoe UI", 9F)
+        btnDelete.ForeColor = Color.Black
+        btnDelete.Location = New Point(171, 445)
+        btnDelete.Name = "btnDelete"
+        btnDelete.Size = New Size(182, 36)
+        btnDelete.TabIndex = 13
+        btnDelete.Text = "DELETE (CTRL + D)"
+        btnDelete.UseVisualStyleBackColor = False
         ' 
         ' ViewSubmissionForm
         ' 
         AutoScaleDimensions = New SizeF(8F, 20F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(585, 450)
+        ClientSize = New Size(533, 521)
+        Controls.Add(btnDelete)
         Controls.Add(btnNext)
         Controls.Add(btnPrevious)
         Controls.Add(tbUserStopwatch)
@@ -209,4 +223,5 @@ Partial Class ViewSubmissionForm
     Friend WithEvents tbUserStopwatch As TextBox
     Friend WithEvents btnPrevious As Button
     Friend WithEvents btnNext As Button
+    Friend WithEvents btnDelete As Button
 End Class

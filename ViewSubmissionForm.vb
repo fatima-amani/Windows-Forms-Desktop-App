@@ -44,6 +44,7 @@ Public Class ViewSubmissionForm
                     Dim errorResponse As String = Await response.Content.ReadAsStringAsync()
                     Dim errorMessage As String = JsonConvert.DeserializeObject(Of JObject)(errorResponse).GetValue("error").ToString()
                     MessageBox.Show(errorMessage)
+                    currentIndex -= 1
                 Else
                     MessageBox.Show("Unexpected error occurred")
                 End If
@@ -54,6 +55,31 @@ Public Class ViewSubmissionForm
             End Try
         End Using
     End Function
+
+    Private Async Function DeleteSubmissionAsync(index As Integer) As Task(Of Boolean)
+        Using client As New HttpClient()
+            Try
+                Dim response As HttpResponseMessage = Await client.DeleteAsync($"http://localhost:3000/del?index={index}")
+                If response.IsSuccessStatusCode Then
+                    MessageBox.Show("Deletion Successful!")
+                    Me.Close()
+                    Return True
+                ElseIf response.StatusCode = HttpStatusCode.NotFound Then
+                    Dim errorResponse As String = Await response.Content.ReadAsStringAsync()
+                    Dim errorMessage As String = JsonConvert.DeserializeObject(Of JObject)(errorResponse).GetValue("error").ToString()
+                    MessageBox.Show(errorMessage)
+                    Return False
+                Else
+                    MessageBox.Show("Unexpected error occurred during deletion.")
+                    Return False
+                End If
+            Catch ex As HttpRequestException
+                MessageBox.Show("Error deleting submission: " & ex.Message)
+                Return False
+            End Try
+        End Using
+    End Function
+
 
 
     Private Sub btnPrevious_Click(sender As Object, e As EventArgs) Handles btnPrevious.Click
@@ -78,10 +104,19 @@ Public Class ViewSubmissionForm
                     btnPrevious.PerformClick()
                 Case Keys.N
                     btnNext.PerformClick()
+                Case Keys.D
+                    btnDelete.PerformClick()
             End Select
         End If
     End Sub
 
+    Private Async Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        Dim success As Boolean = Await DeleteSubmissionAsync(currentIndex)
+
+        If Not success Then
+            MsgBox("Failed to delete")
+        End If
+    End Sub
 End Class
 
 
